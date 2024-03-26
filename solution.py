@@ -1,4 +1,3 @@
-class Account:
-    def __init__(self, id, balance):
-        self.id = id
-        self.balance = balance
+def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited {amount} to account {self.id}. New balance: {self.balance}")
