@@ -1,13 +1,16 @@
-using System;
-
-public class Account
+public void Deposit(decimal amount)
 {
-    public string Id { get; private set; }
-    public decimal Balance { get; private set; }
+    Balance += amount;
+}
 
-    public Account(string id, decimal initialBalance)
+public void Withdraw(decimal amount)
+{
+    if (Balance >= amount)
     {
-        Id = id;
-        Balance = initialBalance;
+        Balance -= amount;
+    }
+    else
+    {
+        Console.WriteLine("Insufficient balance");
     }
 }
